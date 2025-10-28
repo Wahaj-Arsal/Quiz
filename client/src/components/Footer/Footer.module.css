@@ -1,0 +1,21 @@
+.wrapper {
+  padding: 1rem;
+  border: 1px solid var(--secondary-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: var(--secondary-bg-color);
+}
+
+.footer {
+  /* display: flex; */
+  /* flex-direction: row; */
+}
+
+.footer_ul {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  list-style: none;
+}

@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  /* height: 100%; */
+}
+
+#root {
+  height: 100%;
+  --primary-bg-color: #606c38;
+  --secondary-bg-color: #fefae0;
+  --primary-text-color: #bc6c25;
+  --secondary-text-color: #dda15e;
+}

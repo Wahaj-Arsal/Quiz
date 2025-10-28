@@ -1,0 +1,15 @@
+.wrapper {
+  /* padding: 4rem; */
+  border: 1px solid var(--primary-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* color: var(--primary-text-color); */
+  background: var(--primary-bg-color);
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 4rem 0;
+}

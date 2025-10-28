@@ -1,0 +1,26 @@
+.wrapper {
+  padding: 2rem 1rem;
+  border: 1px solid var(--secondary-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--secondary-bg-color);
+}
+
+.links {
+  display: flex;
+  font-size: 1.75rem;
+}
+
+.activeLink,
+.inactiveLink {
+  padding: 0 2rem;
+}
+
+.activeLink {
+  color: var(--secondary-text-color);
+}
+
+.inactiveLink {
+  color: var(--primary-text-color);
+}

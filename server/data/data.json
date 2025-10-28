@@ -1,0 +1,115 @@
+[
+  {
+    "name": "Harry Potter",
+    "id": "harry-potter",
+    "image": "home_icon.jpg",
+    "audio": "home_audio.mp3",
+    "quizQuestionsList": [
+      {
+        "id": 1,
+        "question": "What is the name of Harry Potter’s owl?",
+        "options": ["Crookshanks", "Scabbers", "Hedwig", "Errol"],
+        "answer": "Hedwig"
+      },
+      {
+        "id": 2,
+        "question": "Which potion allows a person to take on the appearance of someone else?",
+        "options": [
+          "Amortentia",
+          "Polyjuice Potion",
+          "Felix Felicis",
+          "Veritaserum"
+        ],
+        "answer": "Polyjuice Potion"
+      },
+      {
+        "id": 6,
+        "question": "What is the name of the spell used to summon objects toward the caster?",
+        "options": ["Alohomora", "Expelliarmus", "Accio", "Imperio"],
+        "answer": "Accio"
+      },
+      {
+        "id": 5,
+        "question": "What magical object does Dumbledore use to review memories?",
+        "options": [
+          "The Deluminator",
+          "The Pensieve",
+          "The Mirror of Erised",
+          "The Time-Turner"
+        ],
+        "answer": "The Pensieve"
+      },
+      {
+        "id": 3,
+        "question": "Who was the headmaster of Hogwarts immediately before Albus Dumbledore?",
+        "options": [
+          "Armando Dippet",
+          "Phineas Nigellus Black",
+          "Elphias Doge",
+          "Brutus Scrimgeour"
+        ],
+        "answer": "Armando Dippet"
+      },
+      {
+        "id": 4,
+        "question": "What is the name of the book that taught Harry about Horcruxes?",
+        "options": [
+          "Magical Theory by Adalbert Waffling",
+          "Secrets of the Darkest Art",
+          "Moste Potente Potions",
+          "The Dark Forces: A Guide to Self-Protection"
+        ],
+        "answer": "Secrets of the Darkest Art"
+      }
+    ]
+  },
+  {
+    "name": "Lord of The Rings",
+    "id": "lord-of-the-rings",
+    "image": "home_icon.jpg",
+    "audio": "home_audio.mp3",
+    "quizQuestionsList": [
+      {
+        "id": 3,
+        "question": "Who forged the One Ring?",
+        "options": ["Gandalf", "Sauron", "Saruman", "Elrond"],
+        "answer": "Sauron"
+      },
+      {
+        "id": 4,
+        "question": "What is the name of Frodo’s sword that glows blue in the presence of Orcs?",
+        "options": ["Glamdring", "Andúril", "Sting", "Orcrist"],
+        "answer": "Sting"
+      },
+      {
+        "id": 1,
+        "question": "What was the name of the sword that was reforged from the shards of Narsil?",
+        "options": ["Sting", "Andúril", "Orcrist", "Glamdring"],
+        "answer": "Andúril"
+      },
+      {
+        "id": 2,
+        "question": "Who is the Lord of the Eagles that rescues Gandalf from Orthanc and later aids in the Battle of the Black Gate?",
+        "options": ["Landroval", "Meneldor", "Gwaihir", "Thorondor"],
+        "answer": "Gwaihir"
+      },
+      {
+        "id": 5,
+        "question": "What are the names of the three Elven Rings of Power?",
+        "options": [
+          "Narya, Elessar, and Andúril",
+          "Nenya, Vilya, and Narya",
+          "Nenya, Círdan, and Vilya",
+          "Aeglos, Narya, and Vilya"
+        ],
+        "answer": "Nenya, Vilya, and Narya"
+      },
+      {
+        "id": 6,
+        "question": "What creature does Gandalf face in the Mines of Moria?",
+        "options": ["Watcher in the Water", "Balrog", "Smaug", "Shelob"],
+        "answer": "Balrog"
+      }
+    ]
+  }
+]
