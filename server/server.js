@@ -14,7 +14,17 @@ app.listen(PORT, () => {
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req, res) => {
+app.get("/quiz", (req, res) => {
   const sendData = JSON.parse(fs.readFileSync("./data/data.json", "utf-8"));
   res.send(sendData);
+});
+
+app.get(`/quiz/:quizId`, (req, res) => {
+  const { quizId } = req.params;
+  // console.log(quizId);
+  const data = JSON.parse(fs.readFileSync("./data/data.json", "utf-8"));
+  // console.log(data);
+  const filteredData = data.find((quiz) => quiz.id === quizId);
+  // console.log(filteredData);
+  res.send(filteredData.quizQuestionsList);
 });
