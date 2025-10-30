@@ -26,8 +26,8 @@ function Quiz() {
     (state) => state.quizQuestions.questions
   );
 
-  console.log(quizzes);
-  console.log("quizzes:", quizQuestionsById);
+  // console.log(quizzes);
+  // console.log("quizzes:", quizQuestionsById);
 
   useEffect(() => {
     dispatch(getQuizQuestionsById(selectedQuizName));
@@ -36,7 +36,7 @@ function Quiz() {
   const quizName = useParams().quizName;
   const filterQuiz = quizzes.filter((quiz) => quiz.id === quizName);
 
-  // console.log(filterQuiz[0].name);
+  // console.log("filterQuiz", filterQuiz);
 
   const checkAnswer = () => {
     let score = 0;
@@ -50,71 +50,71 @@ function Quiz() {
   };
 
   let score = checkAnswer();
-  if (questionNumber >= quizQuestionsById.length) {
-    return (
-      <div className={style.result}>
-        <h1 className={style.score}>
-          Your Score: <br />
-          {`${score}`}
-        </h1>
-        <h2 className={style.score}>{`out of ${quizQuestionsById.length}`}</h2>
-        <Link to={"/"}>
-          <button className={style.button}>Back Home</button>
-        </Link>
-      </div>
-    );
-  }
 
   // console.log(filterQuiz[0].quizQuestionsList.length);
 
   return (
     <>
-      {quizStatus && quizQuestionsByIdStatus === "loading" && <h1>Loading</h1>}
-      {quizStatus && quizQuestionsByIdStatus === "succeeded" && (
-        <>
-          <div className={style.wrapper}>
-            <h1 className={style.title}>{`${filterQuiz[0].name}`}</h1>
-            <div className={style.content}>
-              <h2
-                className={style.question}
-              >{`${quizQuestionsById[questionNumber].question}`}</h2>
-              <div>
-                {quizQuestionsById[questionNumber].options.map(
-                  (option, index) => {
-                    return (
-                      <div key={index} className={style.input}>
-                        <input
-                          type="radio"
-                          id={option}
-                          name="quizOption"
-                          value={option}
-                          checked={selectedOption === option}
-                          onChange={(e) => setSelectedOption(e.target.value)}
-                        />
-                        <label htmlFor={option}>{option}</label>
-                      </div>
-                    );
-                  }
-                )}
-              </div>
-              <button
-                className={style.button}
-                onClick={() => {
-                  setQuestionNumber((prev) => prev + 1);
-                  setSelectedAnswers((prev) => [...prev, selectedOption]);
-                  setCorrectAnswer([
-                    ...correctAnswer,
-                    filterQuiz[0].quizQuestionsList[questionNumber].answer,
-                  ]);
-                  checkAnswer();
-                }}
-              >
-                Next Question
-              </button>
-            </div>
+      {quizQuestionsByIdStatus === "loading" && <h1>Loading</h1>}
+      {quizQuestionsByIdStatus === "succeeded" &&
+        (questionNumber >= quizQuestionsById.length ? (
+          <div className={style.result}>
+            <h1 className={style.score}>
+              Your Score: <br />
+              {`${score}`}
+            </h1>
+            <h2
+              className={style.score}
+            >{`out of ${quizQuestionsById.length}`}</h2>
+            <Link to={"/"}>
+              <button className={style.button}>Back Home</button>
+            </Link>
           </div>
-        </>
-      )}
+        ) : (
+          <>
+            <div className={style.wrapper}>
+              <h1 className={style.title}>{`${filterQuiz?.[0]?.name}`}</h1>
+              <div className={style.content}>
+                <h2
+                  className={style.question}
+                >{`${quizQuestionsById[questionNumber].question}`}</h2>
+                <div>
+                  {quizQuestionsById[questionNumber].options.map(
+                    (option, index) => {
+                      return (
+                        <div key={index} className={style.input}>
+                          <input
+                            type="radio"
+                            id={option}
+                            name="quizOption"
+                            value={option}
+                            checked={selectedOption === option}
+                            onChange={(e) => setSelectedOption(e.target.value)}
+                          />
+                          <label htmlFor={option}>{option}</label>
+                        </div>
+                      );
+                    }
+                  )}
+                </div>
+                <button
+                  className={style.button}
+                  onClick={() => {
+                    setQuestionNumber((prev) => prev + 1);
+                    setSelectedAnswers((prev) => [...prev, selectedOption]);
+                    setCorrectAnswer([
+                      ...correctAnswer,
+                      filterQuiz[0].quizQuestionsList[questionNumber].answer,
+                    ]);
+                    checkAnswer();
+                  }}
+                >
+                  Next Question
+                </button>
+              </div>
+            </div>
+          </>
+        ))}
     </>
   );
 }
